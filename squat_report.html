@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>深蹲动作分析报告</title>
+
+<style>
+body {
+    font-family: "Microsoft YaHei", sans-serif;
+    max-width: 900px;
+    margin: 32px auto;
+    padding: 0 20px;
+    color: #253247;
+    background: #f6f8fb;
+    line-height: 1.7;
+}
+
+h1, h2 { color: #183b56; }
+
+.subtitle { color: #617286; }
+
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 14px;
+    margin: 24px 0;
+}
+
+.card {
+    background: white;
+    border: 1px solid #dce4ec;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.label { color: #65758b; font-size: 14px; }
+
+.value {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+.chart {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #dce4ec;
+    text-align: left;
+}
+
+.notice {
+    margin-top: 24px;
+    padding: 16px;
+    background: #fff8e8;
+    border-radius: 10px;
+    color: #624b21;
+}
+
+@media print {
+    body { background: white; }
+}
+</style>
+</head>
+
+<body>
+<h1>深蹲动作分析报告</h1>
+<p class="subtitle">人体姿态识别与二维关节角度估计</p>
+
+<div class="metrics">
+    <div class="card">
+        <div class="label">分析侧</div>
+        <div class="value">RIGHT</div>
+    </div>
+
+    <div class="card">
+        <div class="label">记录时长</div>
+        <div class="value">9.23 秒</div>
+    </div>
+
+    <div class="card">
+        <div class="label">最大膝屈曲估计值</div>
+        <div class="value">
+            138.3°
+        </div>
+    </div>
+    <div class="card">
+        <div class="label">踝关节二维角度估计（同一时刻）</div>
+        <div class="value">-14.3°</div>
+    </div>
+    
+    <div class="card">
+        <div class="label">对应时间</div>
+        <div class="value">4.58 秒</div>
+    </div>
+</div>
+
+<h2>关节角度变化曲线</h2>
+
+    <img class="chart"
+         src="squat_phase_curve.png"
+         alt="深蹲膝关节角度变化曲线">
+    
+
+<h2>动作阶段记录</h2>
+<table>
+    <thead>
+        <tr><th>阶段</th><th>记录帧数</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>站立/接近站立</td><td>135</td></tr><tr><td>下蹲阶段</td><td>75</td></tr><tr><td>最低点附近</td><td>37</td></tr><tr><td>起身阶段</td><td>30</td></tr>
+    </tbody>
+</table>
+
+<div class="notice">
+<strong>使用说明</strong><br>
+本报告用于动作可视化和康复评估辅助讨论。
+关节角度为二维视频估计值，可能受到拍摄方向、遮挡、
+关键点定位误差和相机透视影响。
+本报告不构成独立诊断，也不能替代经过验证的临床测量。
+请由康复专业人员结合实际情况解读。
+</div>
+
+</body>
+</html>
