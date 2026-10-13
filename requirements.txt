@@ -1,0 +1,9 @@
+streamlit
+opencv-python
+mediapipe
+numpy
+pandas
+matplotlib
+imageio
+imageio-ffmpeg
+Pillow
